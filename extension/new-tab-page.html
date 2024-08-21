@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Новая вкладка</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="shortcut icon" href="img/main.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/new-page.css">
+	<link rel="stylesheet" href="css/root.css">
+	<script  src="js/jquery-3.6.3.js"></script>
+	<script src="js/axios.min.js"></script>
+</head>
+<header>
+	
+</header>
+<body>
+
+	
+	<div id="overlay">
+		<div class="add-new-tab">
+			<h2 style="margin-left: 3px;">New Link</h2>
+			<div id="overlay-close"><i class="bi bi-x-circle"></i></div>
+			<div class="inputs">
+				<input id="link-title" class="input_shortcut" type="text" placeholder="Title">
+				<input id="link-position" class="input_shortcut" type="text" placeholder="Auto" readonly>
+				<input id="link-url" class="input_shortcut" type="text" placeholder="Link">
+			</div>
+			<div class="btn-block">
+				<div id="shortcut-link-add" class="btn"><i class="bi bi-plus-circle"></i> Add</div>
+				<div id="shortcut-link-save" class="btn"><i class="bi bi-check-circle"></i>Save</div>
+				<div id="shortcut-link-remove" class="btn"><i class="bi bi-x-circle"></i>Remove</div>
+			</div>
+			
+		</div>
+	</div>
+	<div id="settings-btn"><i class="bi bi-gear"></i></div>
+	<div id="settings">
+		<h3>Settings</h3>
+		<ul id="view-satus">
+			<li>
+				Display links: <span id="view-shortcuts-status"></span>
+			</li>
+			<li>
+				Bookmarks sort: <span id="view-bookmarks-status"></span>
+			</li>
+			<li>
+				Theme: <span>Default</span>
+			</li>
+			<li>
+				History: <span id="view-history-status"></span>
+			</li>
+			<li>
+				Radio volume: 
+				<input type="range" name="" id="radio-volume">
+			</li>
+
+			<a href="settings.html" >More settings</a>
+		</ul>
+	</div>
+		<div id="left-block">
+			<div id="weather" class="big-blocks">
+				<div id="weather-blocks">
+					<div class="small-blocks" id="weather-now" title="qwewq">
+						<i class="bi" class="weather-sb-name" title=""></i>
+						<div>
+							<span class="weather-at-time">Today at 18:00</span>
+							Temperature: <span class="weather-sb-temp">+15</span>
+							<div class="weather-sb-temp-min-max">
+								Min: <span>+20</span> / Max: <span>+25</span>
+							</div>
+							
+						</div>
+					</div>
+					<div class="small-blocks" id="weather-3h" title="qwewq">
+						<i class="bi" class="weather-sb-name" title=""></i>
+						<div>
+							<span class="weather-at-time">Today at 18:00</span>
+							Temperature: <span class="weather-sb-temp">+15</span>
+							<div class="weather-sb-temp-min-max">
+								Min: <span>+20</span> / Max: <span>+25</span>
+							</div>
+							
+						</div>
+					</div>
+					<div class="small-blocks" id="weather-6h">
+						<i class="bi" class="weather-sb-name" title=""></i>
+						<div >
+							<span class="weather-at-time">Today at 18:00</span>
+							Temperature: <span class="weather-sb-temp">+15</span>
+							<div class="weather-sb-temp-min-max">
+								Min: <span>+20</span> / Max: <span>+25</span>
+							</div>
+						</div>
+					</div>
+					<div class="small-blocks" id="weather-9h">
+						<i class="bi" class="weather-sb-name" title=""></i>
+						<div >
+							<span class="weather-at-time">Today at 18:00</span>
+							Temperature: <span class="weather-sb-temp">+15</span>
+							<div class="weather-sb-temp-min-max">
+								Min: <span>+20</span> / Max: <span>+25</span>
+							</div>
+						</div>
+					</div>
+					<div class="small-blocks" id="weather-12h">
+						<i class="bi" class="weather-sb-name" title=""></i>
+						<div >
+							<span class="weather-at-time">Today at 18:00</span>
+							Temperature: <span class="weather-sb-temp">+15</span>
+							<div class="weather-sb-temp-min-max">
+								Min: <span>+20</span> / Max: <span>+25</span>
+							</div>
+						</div>
+					</div>
+					<div class="small-blocks" id="weather-15h" title="qwewq">
+						<i class="bi" class="weather-sb-name" title=""></i>
+						<div>
+							<span class="weather-at-time">Today at 18:00</span>
+							Temperature: <span class="weather-sb-temp">+15</span>
+							<div class="weather-sb-temp-min-max">
+								Min: <span>+20</span> / Max: <span>+25</span>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="news" class="big-blocks" style="opacity: 1;">
+				<div id="news-select-topics">
+					<input type="radio" class="news-topics" name="category" id="news-select-topic-world" value="world">
+					<label for="news-select-topic-world" >World</label>
+					<input type="radio" class="news-topics" name="category" id="news-select-topic-business" value="business" checked>
+					<label for="news-select-topic-business" class="news-topics-active">Business</label>
+					<input type="radio" class="news-topics" name="category" id="news-select-topic-technology" value="technology" />
+					<label for="news-select-topic-technology">Technology</label>
+					<input type="radio" class="news-topics" name="category" id="news-select-topic-science" value="science">
+					<label for="news-select-topic-science">Science</label>
+					<input type="radio" class="news-topics" name="category" id="news-select-topic-politics" value="politics">
+					<label for="news-select-topic-politics">Politics</label>
+					<input type="radio" class="news-topics" name="category" id="news-select-topic-health" value="health">
+					<label for="news-select-topic-health">Health</label>
+				</div>
+				<div id="news-blocks"></div>
+			</div>
+		</div>
+		<!-- var(--main-background-color) -->
+		<div id="center-block"> 
+			
+			<div style="border-radius: 10px; overflow: hidden;height: 126px; background: #fff; opacity: 1;width: 100%; margin-bottom: 20px;margin-top: 20px; line-height: 126px; text-align: center; font-size: 25px;">
+				<!-- <button type="submit" id="oqweiqwoeiqeinnei"> reset</button> -->
+				<img src="https://media1.tenor.com/m/Bh1zvwlUKWgAAAAC/anime-tyan.gif" style="object-fit: cover;" alt="" width="100%"  height="100%">
+				 </div>
+			<!-- <div id="header" title="Radio: Venice Classic Radio">SPACE M<img src="img/main.png">NKEY</div> -->
+			<form action="https://www.google.com/search">
+				<div id="search-cleaner"><i class="bi bi-x-circle"></i></div>
+				<input type="text" placeholder="Search" id="search-input" name="q" autocomplete="off">
+			</form>
+			<ul id="search-results">
+
+			</ul>
+			<div id="radio">
+				<!-- <b>Station:</b> -->
+				<input type="radio" checked name="radio-switch" id="radio-switch-VCR">
+				<label class="radio-switch" for="radio-switch-VCR">Venice Classic</label>
+				<input type="radio" name="radio-switch" id="radio-switch-RF">
+				<label class="radio-switch" for="radio-switch-RF">Retro FM</label>
+				
+				<input type="radio" name="radio-switch" id="radio-switch-E">
+				<label class="radio-switch" for="radio-switch-E">Europa+</label>
+				<span id="currency-bitcoin"></span>
+				<span id="currency-dollar"></span>
+				<span id="currency-euro"></span>
+				<!-- <b style="text-transform: uppercase;">Now playing:</b> <span id="artist">Author</span> — <span id="title">Song title</span> -->
+			</div>
+			<!-- <div id="shortcut-link-create">+</div> -->
+			<div id="shortcut"></div>
+		</div>
+		<div id="right-side-block">
+			<div style="border-radius: 10px; overflow: hidden; height: 126px; background: #fff; opacity: 1;width: calc(100% - 40px); margin-bottom: 20px;margin-top: 20px; line-height: 126px; text-align: center; font-size: 25px;">
+				<img src="https://steamuserimages-a.akamaihd.net/ugc/949599512600537346/10AF91C3120D444569F4F7DA3BDA9E2630831D0A/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" style="object-fit: cover;" alt="" width="100%"  height="100%">
+			
+			</div>
+			<div id="historyvsb"></div>
+			<div id="history">
+				<!-- <h1>Последние запросы</h1> -->
+				<div class="request-btn">
+							<!-- <span id="get-my-notes" class="history-request-btns">notes</span>
+						<span id="get-history" class="history-request-btns history-request-btns history-request-btn-active">History</span>
+						<span id="get-history-recently" class="history-request-btns">Recently</span> -->
+					<!-- <span id="get-history-youtube" class="history-request-btns">Youtube</span> -->
+					<!-- <span id="get-history-cineb" class="history-request-btns">Cineb</span> -->
+					
+				</div>
+				<div id="historyList">
+					
+				</div>
+			</div>
+		</div>
+	<div id="folderBg"><div class="folders"></div></div>
+</body>
+<script type="text/javascript" src="js/GLOBAL.js"></script>
+<script src="js/new-tab.js"></script>
+</html>

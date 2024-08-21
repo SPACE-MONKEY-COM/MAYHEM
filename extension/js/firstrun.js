@@ -1,0 +1,1 @@
+let getC=JSON.parse(localStorage.getItem("settings"))||"";null==getC&&(localStorage.setItem("settings",JSON.stringify(settingsCookie)),window.close()),chrome.tabs.create({});
