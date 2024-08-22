@@ -1,1 +1,21 @@
-:root{--main-background-color:#f4f4f4;--main-text-color:#000;--main-border-radius:0px;--main-border-radius:10px;--second-background-color:#fff;--second-border-radius:5px}*{margin:0;padding:0;outline:0}body{font-family:Roboto}
+:root{
+	--main-background-color: #f4f4f4;
+	--main-text-color: #000;
+	--main-border-radius: 0px;
+	--main-border-radius: 10px;
+	/* --second-background-color: whitesmoke; */
+	--second-background-color: #fff;
+	--second-border-radius: 5px;
+	/* --second-background-color: #f4f4f4; */
+	/* --second-background-color: #e7e7e7; */
+	/* #8a7ed3 */
+	/* Matrix */
+	/* --main-background-color: #000;
+	--main-text-color: #000;
+	--main-border-radius: 20px;
+	--second-background-color: green; */
+}
+*{margin: 0;padding: 0; outline: none;}
+body{
+	font-family: "Roboto";
+}

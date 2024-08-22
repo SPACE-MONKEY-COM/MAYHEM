@@ -1,17 +1,21 @@
 {
     "manifest_version": 3,
     "name": "Space Monkey",
-    "version": "0.000001",
+    "version": "0.0.2",
     "description": "Sir, the first rule of Project Mayhem is you do not ask questions, sir.",
     "action": {
-        "default_popup": "extension/main.html",
-        "default_icon": "extension/img/main.png"
+        "default_popup": "extension/main.html"
     },
     "background":{
         "service_worker":"service_worker.js"
     },
     "chrome_url_overrides": {
         "newtab": "extension/new-tab-page.html"
+    },
+    "icons": {
+        "16": "extension/img/16.png",
+        "48": "extension/img/48.png",
+        "128": "extension/img/128.png"
     },
     "content_scripts": [
         {
@@ -20,6 +24,7 @@
             ],
             "js": [
                 "extension/js/jquery-3.6.3.js",
+                "extension/js/axios.min.js",
                 "background.js"
             ],
             "css": [
