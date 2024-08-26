@@ -18,9 +18,8 @@
     display: flex;
     justify-content: center;
     top: 15px; 
-    /* -45px */
+    left: calc(50% - 240px);
     transition: .2s;
-    width: 100%;
 }
 
 #back-to-kinopoisk a {

@@ -1,5 +1,1 @@
-chrome.runtime.onInstalled.addListener(details => {
-	if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
-		chrome.tabs.create({});
-	}
-});
+chrome.runtime.onInstalled.addListener(e=>{e.reason===chrome.runtime.OnInstalledReason.INSTALL&&(e="b"+chrome.runtime.getManifest().version,chrome.tabs.create({url:"/extension/changelog.html?"+e}))}),chrome.runtime.onMessage.addListener(function(e,a,t){switch(e.function){case"sitesData":console.log("ss");let o=e.data.url,n=e.data.title||"",s=e.data.icon;chrome.storage.local.get(function(e){var e=e.sitesData||[],a=(e[0]=e[0]||[],e[1]=e[1]||[],e[0]),t=e[1];-1==a.indexOf(o)?(a.push(o),t.push({url:o,title:n,icon:s})):(console.log(t[a.indexOf(o)]),t[a.indexOf(o)].icon=s),chrome.storage.local.set({sitesData:e})});break;case"getPlaybackRate":return chrome.storage.local.get(["playbackRate"],e=>{t({data:e||1})}),!0;case"setPlaybackRate":var c=e.data||1;chrome.storage.local.set({playbackRate:c});break;default:t({data:"Unknown action"})}});

@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Space Monkey",
-    "version": "0.0.2",
+    "name": "Space Monkey - Mayhem",
+    "version": "0.0.3",
     "description": "Sir, the first rule of Project Mayhem is you do not ask questions, sir.",
     "action": {
         "default_popup": "extension/main.html"
